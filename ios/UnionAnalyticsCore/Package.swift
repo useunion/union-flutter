@@ -12,10 +12,8 @@ let package = Package(
         .library(name: "UnionAnalyticsCore", targets: ["UnionAnalyticsCore"]),
     ],
     dependencies: [
-        // DEVELOPMENT: the local checkout, because union-ios 0.4.0 is committed but not tagged yet.
-        // AT RELEASE (once union-ios has the 0.4.0 tag), replace the line below with:
-        //   .package(url: "https://github.com/useunion/union-ios", from: "0.4.0"),
-        .package(path: "/Users/kuba/Desktop/union/union-ios"),
+        // For local work against an unreleased union-ios, swap in `.package(path: "<checkout>")`.
+        .package(url: "https://github.com/useunion/union-ios", from: "0.4.0"),
     ],
     targets: [
         .target(
