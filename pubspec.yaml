@@ -1,0 +1,27 @@
+name: union_analytics
+description: "Product analytics and crash reporting for Flutter apps, for the Union platform. A thin wrapper over the native Union iOS and Android SDKs."
+version: 0.1.0
+homepage: https://useunion.dev
+repository: https://github.com/useunion/union-flutter
+
+environment:
+  sdk: ^3.5.0
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: dev.useunion.union_analytics
+        pluginClass: UnionAnalyticsPlugin
+      ios:
+        pluginClass: UnionAnalyticsPlugin
