@@ -24,12 +24,7 @@ flutter config --enable-swift-package-manager
 CocoaPods is not a supported install path for this plugin; the podspec exists only so tooling can resolve
 it and fails to compile with an explanatory message if the Union module is missing.
 
-**Android** resolves `dev.useunion:union:0.1.0` from Maven Central. Until it is published, run
-`./gradlew :union:publishToMavenLocal` in `union-android` and add `mavenLocal()` to your app's repositories
-(the example app does).
-
-Development note: `ios/UnionAnalyticsCore/Package.swift` points at the local `union-ios` checkout. At release it
-switches to `https://github.com/useunion/union-ios` from `0.4.0`.
+**Android** resolves `dev.useunion:union:0.1.0` from Maven Central.
 
 ## Configure
 

@@ -22,7 +22,7 @@ Flutter plugin `union_analytics`: a thin Dart wrapper over the native Union SDKs
 
 - `lib/` Dart API; `lib/src/stack_parser.dart` parses Dart stacks (in_app rule documented there).
 - `ios/UnionAnalyticsCore/` Swift: argument mapping and dispatch, no Flutter import, `swift test` runs on the host.
-  It declares the `union-ios` dependency (local path now, GitHub URL from 0.4.0 at release).
+  It declares the `union-ios` dependency (GitHub URL, from 0.4.0).
 - `ios/union_analytics/` Flutter's SwiftPM plugin package (channel glue only). `ios/union_analytics.podspec` exists
   but CocoaPods is not a supported install path (union-ios has no podspec).
 - `android/` Kotlin: `Arguments.kt` (mapping, JUnit tested) and `UnionAnalyticsPlugin.kt` (dispatch).
@@ -38,7 +38,7 @@ cd example && flutter build apk --debug && flutter build ios --debug --no-codesi
 ```
 
 Android env: `ANDROID_HOME=/opt/homebrew/share/android-commandlinetools`, `JAVA_HOME=/opt/homebrew/opt/openjdk@17`.
-Before the first Android build: `cd ../union-android && ./gradlew :union:publishToMavenLocal` (the example adds `mavenLocal()`).
+Against an unreleased union-android: `./gradlew :union:publishToMavenLocal` there and add `mavenLocal()` to the example's repositories.
 
 ## Known quirk: checkout directory name
 

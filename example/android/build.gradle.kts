@@ -2,10 +2,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        // DEVELOPMENT ONLY: dev.useunion:union is not on Maven Central yet. Publish it first with
-        //   cd ../union-android && ./gradlew :union:publishToMavenLocal
-        // Remove this line once 0.1.0 is released.
-        mavenLocal()
     }
 }
 
